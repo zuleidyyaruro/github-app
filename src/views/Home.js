@@ -3,11 +3,11 @@ import NavBar from '../components/Custom/NabBar';
 import Form from '../components/Home/Form';
 import Profile from '../components/Home/Profile';
 import Repositories from '../components/Home/Repositories';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const Home = () => {
 
-    const {login}=useParams();
+    const { login } = useParams();
 
     const [userName, setUserName] = useState('zuleidyyaruro');
     const [dataUserName, setDataUserName] = useState(null);
@@ -30,10 +30,9 @@ const Home = () => {
                 }
                 handleDataUserName();
             }
-
         }
 
-    }, []);
+    }, [login]);
 
     const handleUserName = (e) => {
         setUserName(e.target.value);
@@ -70,7 +69,6 @@ const Home = () => {
                             :
                             null
                     }
-
                 </div>
             </div>
         </>

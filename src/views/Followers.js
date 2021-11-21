@@ -18,7 +18,7 @@ const Followers = () => {
         }
 
         handleData();
-    }, []);
+    }, [user]);
 
 
     return (
