@@ -33,7 +33,7 @@ const Home = () => {
         const response = await fetch(`https://api.github.com/users/${userName}`)
         const result = await response.json();
         setDataUserName(result);
-        setUserName(null);
+        setUserName('');
     }
 
     return (
