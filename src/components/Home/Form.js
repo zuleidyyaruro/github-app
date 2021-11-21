@@ -20,7 +20,7 @@ const Form = ({ handleUserName, handleSubmit, userName }) => {
                 />
                 <button
                     type="submit"
-                    className="btn btn-success mt-3"
+                    className="btn btn-info mt-3"
                 >
                     Submit
                 </button>

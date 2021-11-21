@@ -34,8 +34,8 @@ const Profile = ({ avatar_url, name, login, followers_url, following_url }) => {
             <h4 className="text-center mt-3">{name}</h4>
             <h6 className="text-center">{login}</h6>
             <div className="d-flex justify-content-center" >
-                <Link to={`/${login}/followers`}>{numberFollowers} Followers</Link>
-                <p className="px-2">{numberFollowings} Followings</p>
+                <Link className="text-decoration-none" to={`/${login}/followers`}>{numberFollowers} Followers</Link>
+                <Link className="px-2 text-decoration-none "  to={`/${login}/followings`}>{numberFollowings} Followings</Link>
             </div>
         </div>
     )
