@@ -9,7 +9,7 @@ const Home = () => {
 
     const { login } = useParams();
 
-    const [userName, setUserName] = useState('zuleidyyaruro');
+    const [userName, setUserName] = useState('');
     const [dataUserName, setDataUserName] = useState(null);
 
     useEffect(() => {
@@ -21,17 +21,7 @@ const Home = () => {
                 setDataUserName(result);
             }
             handleDataUserName();
-        } else {
-            if (userName) {
-                const handleDataUserName = async (e) => {
-                    const response = await fetch(`https://api.github.com/users/${userName}`)
-                    const result = await response.json();
-                    setDataUserName(result);
-                }
-                handleDataUserName();
-            }
         }
-
     }, [login]);
 
     const handleUserName = (e) => {
@@ -50,7 +40,7 @@ const Home = () => {
         <>
             <NavBar />
             <div className="container mt-3">
-                <Form handleUserName={handleUserName} handleSubmit={handleSubmit} />
+                <Form handleUserName={handleUserName} handleSubmit={handleSubmit} userName={userName} />
                 <div className="row mt-5">
                     {
                         dataUserName ?
